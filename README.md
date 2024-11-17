@@ -28,3 +28,12 @@ Each document in the database represents a customer and contains fields like fir
 <h4>4. Data Validation and Error Handling</h4><br>
 On the frontend, form validation is implemented to ensure that all fields are filled in correctly before the form is submitted.<br>
 On the backend, error handling ensures that any issues (e.g., database connection failures, missing data) are captured and returned to the user with appropriate messages.<br>
+<h2>Challenges Faced</h2>
+<h3>Database Integration with MongoDB</h3>
+Integrating MongoDB for data storage was straightforward, but I faced some initial difficulty in structuring the database schema to meet the project requirements. I had to ensure that the data models were flexible enough to handle different types of customer data without rigid constraints.
+
+Solution: I decided to keep the MongoDB schema simple and flexible by using Mongoose to define the customer data model. I ensured that the fields were optional where necessary and added validation to enforce required fields like email and phone number.
+<h3>Frontend Validation and UX Challenges</h3>
+Ensuring that the form validation on the frontend was both user-friendly and functional posed a challenge. I needed to make sure the user received feedback when submitting incomplete or incorrect data.
+
+Solution: I used Material-UI's TextField component's built-in validation and error handling features. I also ensured that the form was not submitted unless all required fields were filled in, providing immediate feedback to the user.
